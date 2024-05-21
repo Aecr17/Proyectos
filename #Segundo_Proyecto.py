@@ -8,7 +8,8 @@ import time
 driver=webdriver.Chrome()
 driver.get("https://demoqa.com/elements")
 driver.maximize_window()
-
+# se agrega un nuevo time sleep
+time.sleep(2)
 #Interactua con un desplegable de una pagina 
 driver.find_element(By.CLASS_NAME, "icon").click()
 time.sleep(3)

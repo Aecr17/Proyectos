@@ -13,13 +13,14 @@ driver.maximize_window()
 dropdown =driver.find_element(By.CLASS_NAME, "icon").click()
 time.sleep(2)
 dropdown= driver.find_element(By.CLASS_NAME, "icon").click()
+#agregale una variable tambien a ese ID 
 driver.find_element(By.ID, "item-0").click()
 
 #Aca podemos interactuar con datos en la caja de texto de la pagina
-text_username = driver.find_element(By.ID, "userName").send_keys("Andres")
+text_username = driver.find_element(By.ID, "userName").send_keys("Andres") 
 text_email = driver.find_element(By.ID, "userEmail").send_keys("Andres@prueba.com")
 text_currentAddress = driver.find_element(By.ID, "currentAddress").send_keys("Av Prueba 5500")
-text_permanetAdderss =driver.find_element(By.ID, "permanentAddress").send_keys("Av Prueba 5500"+Keys.TAB)
+text_permanetAdderss = driver.find_element(By.ID, "permanentAddress").send_keys("Av Prueba 5500"+Keys.TAB)
 btn_send = driver.find_element(By.ID, "submit")
 btn_send.click()
 

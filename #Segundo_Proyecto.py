@@ -2,7 +2,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
 import time
+import csv
+
 
 #Interactuar con la pagina web
 driver=webdriver.Chrome()
@@ -25,6 +28,19 @@ text_currentAddress = driver.find_element(By.ID, "currentAddress").send_keys("Av
 text_permanetAdderss = driver.find_element(By.ID, "permanentAddress").send_keys("Av Prueba 5500"+Keys.TAB)
 btn_send = driver.find_element(By.ID, "submit")
 btn_send.click()
+time.sleep(2)
+
+#Aca podemos interactuar con las Web tables
+web_tables = driver.find_element(By.ID, "item-3")
+web_tables.click()
+add = driver.find_element(By.ID, "addNewRecordButton")
+add.click()
+registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]')
+registration_form.click()
+
+time.sleep(3)
+#text_asercion = "Campos Vacios no se puede avanzar:"
+assert "Acceso correcto!" == registration_form.text,"Los campos son obligatorios"
 
 #Tiempo de espera
 time.sleep(8)

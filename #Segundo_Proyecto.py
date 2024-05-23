@@ -35,10 +35,25 @@ web_tables = driver.find_element(By.ID, "item-3")
 web_tables.click()
 add = driver.find_element(By.ID, "addNewRecordButton")
 add.click()
+#registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]')
+#registration_form.click()
+time.sleep(2)
+
+first_name_text = driver.find_element(By.ID, "firstName")
+first_name_text.send_keys("Andres")
+last_name_text = driver.find_element(By.ID, "lastName")
+last_name_text.send_keys("Cardoza")
+email_text = driver.find_element(By.ID, "userEmail")
+email_text.send_keys("prueba@gmail.com")
+age_text = driver.find_element(By.ID, "age")
+age_text.send_keys("23")
+salary_text = driver.find_element(By.ID, "salary")
+salary_text.send_keys("80")
+department_text = driver.find_element(By.ID, "department")
+department_text.send_keys("17")
+time.sleep(2)
 registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]')
 registration_form.click()
-
-time.sleep(3)
 #text_asercion = "Campos Vacios no se puede avanzar:"
 #assert "Acceso incorrecto" == registration_form.text,"Los campos son obligatorios"
 

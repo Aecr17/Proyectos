@@ -39,6 +39,7 @@ add.click()
 #registration_form.click()
 time.sleep(2)
 
+#Aca interactuamos con el modulo web tables
 first_name_text = driver.find_element(By.ID, "firstName")
 first_name_text.send_keys("Andres")
 last_name_text = driver.find_element(By.ID, "lastName")

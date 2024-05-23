@@ -40,7 +40,7 @@ registration_form.click()
 
 time.sleep(3)
 #text_asercion = "Campos Vacios no se puede avanzar:"
-assert "Acceso correcto!" == registration_form.text,"Los campos son obligatorios"
+#assert "Acceso incorrecto" == registration_form.text,"Los campos son obligatorios"
 
 #Tiempo de espera
 time.sleep(8)

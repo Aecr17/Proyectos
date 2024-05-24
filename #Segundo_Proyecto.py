@@ -35,9 +35,10 @@ web_tables = driver.find_element(By.ID, "item-3")
 web_tables.click()
 add = driver.find_element(By.ID, "addNewRecordButton")
 add.click()
-#registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]')
-#registration_form.click()
-time.sleep(2)
+
+# registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]')
+# registration_form.click()
+# time.sleep(2)
 
 #Aca interactuamos con el modulo web tables
 first_name_text = driver.find_element(By.ID, "firstName")
@@ -52,11 +53,10 @@ salary_text = driver.find_element(By.ID, "salary")
 salary_text.send_keys("80")
 department_text = driver.find_element(By.ID, "department")
 department_text.send_keys("17")
-time.sleep(2)
-registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]')
+time.sleep(3)
+
+registration_form = driver.find_element(By.XPATH, '//*[@id="submit"]') 
 registration_form.click()
-#text_asercion = "Campos Vacios no se puede avanzar:"
-#assert "Acceso incorrecto" == registration_form.text,"Los campos son obligatorios"
 
 #Tiempo de espera
 time.sleep(8)

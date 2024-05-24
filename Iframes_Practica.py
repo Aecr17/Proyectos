@@ -22,7 +22,6 @@ driver.switch_to.frame(iframe)
 ## Espera explicita de 3 segundos
 #driver.implicitly_wait(4)
 espera_explicita = WebDriverWait(driver,3) 
-
 ## INTERACTUA CON EL BOTON DE SALIDA
 exit_click = driver.find_element (By.CLASS_NAME, "ab-close-button")
 exit_click.click()
@@ -37,5 +36,11 @@ time.sleep(3)
 #Interaccion con el boton de Login dentro del iframe
 boton_dentro_del_iframe = driver.find_element(By.XPATH,'//*[@id="fitt-analytics"]/div[2]/div/div/div/div/nav/ul/li[1]/div/div/button')
 boton_dentro_del_iframe.click()
-driver.switch_to.default_content()
-time.sleep(10)
+#Entra de nuevo al Iframe
+
+#inserta valores
+# email_insert = driver.find_element(By.CLASS_NAME, '//*[@id="InputIdentityFlowValue"]')
+# email_insert.send_keys("Andresprueba@gmail.com")
+# driver.switch_to.default_content()
+
+time.sleep(12)

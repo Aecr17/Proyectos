@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 import csv
-
+#Cambiar a actionchains
 
 #Interactuar con la pagina web
 driver=webdriver.Chrome()
@@ -14,7 +14,11 @@ driver.maximize_window()
 
 #Interactua con un desplegable de una pagina 
 dropdown =driver.find_element(By.CLASS_NAME, "icon").click()
-time.sleep(2)
+
+#Espera implicita
+espera = driver.implicitly_wait(5)
+
+#Interactua nuevamente con el desplegable de la pagina
 dropdown= driver.find_element(By.CLASS_NAME, "icon").click()
 
 #Interacion con el boton "Caja de texto"

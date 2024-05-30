@@ -6,8 +6,6 @@ Se agregaron lineas de codigo donde se interactua con el boton "Submit"
 
 Se agregaron funciones a las interacciones con el desplegable, caja de texto y boton ''Submit''
 
-se agrega una nueva interaccion con el modulo web tables
-
-Se agrega un nuevo freamworks donde se interactua con los iframes
-
 Se agrega la interaccion con un nuevo iframe dentro de la pagina
+
+Se agregaron dos nuevas espereas explicitas
